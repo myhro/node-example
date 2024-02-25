@@ -1,7 +1,7 @@
 IMAGE ?= myhro/node-example
 
 build:
-	docker build -t $(IMAGE) .
+	docker buildx build --platform linux/amd64 -t $(IMAGE) .
 
 clean:
 	rm -rf node_modules/
